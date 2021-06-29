@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b1073088-0a7b-4e4e-8192-a8ba35c27e60" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="gitdemov1Flow" doc:id="79cdf459-c649-43fc-b759-f9a2df0b2d72" >
+		<http:listener doc:name="Listener" doc:id="cd337b73-1e58-4542-ad6c-1f54cc35d155" config-ref="HTTP_Listener_config" path="gitdemov1"/>
+		<logger level="INFO" doc:name="Logger" doc:id="312f8d7c-aa0c-4ea7-8f6f-a55604fae2da" />
+	</flow>
+</mule>
